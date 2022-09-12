@@ -103,6 +103,17 @@
                              r_dam_bonus = "1d10+4",
                              other_dam_bonus = "1d6", other_dam_bonus_desc = "Quarry Only",
                              action_point = 1)
+  player_table <- rbind(player_table, 
+                        data.table(unit_code = "Suzie", name = "Tank Test", type = "Defender",
+                                   level = 1, init_bonus = 0,
+                                   max_hp = 27, ac = 20, fort = 15, ref = 13, will = 14, speed = 5,
+                                   healing_surge_count_max = 7,
+                                   m_attack_bonus = 8,
+                                   m_dam_bonus = "1d8+4", 
+                                   r_attack_bonus = 0, 
+                                   r_dam_bonus = "1d4+0",
+                                   other_dam_bonus = "1d6", other_dam_bonus_desc = "Quarry Only",
+                                   action_point = 1))
   player_table[,":=" (blodied_threshold = floor(max_hp/2),
                       player_flag = 1,
                       healing_surge_hp_value = floor(max_hp/4),
